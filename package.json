@@ -1,0 +1,18 @@
+{
+  "name": "watercraftbooks",
+  "version": "1.0.0",
+  "description": "Watercraft Books - Understanding Carp Fishing by V.Fisher",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "dev": "serve ."
+  },
+  "keywords": [
+    "carp-fishing",
+    "fishing-guide",
+    "uk-fishing",
+    "watercraft-books"
+  ],
+  "author": "V.Fisher",
+  "license": "ISC"
+}
