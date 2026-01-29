@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Carp Fishing by V.Fisher | Watercraft Books by Watercraft Books - UK Carp Fishing Guide</title>
+    <meta name="description" content="A practical guide to carp fishing on British waters. 27 years of experience from Bulgaria to Britain. Learn watercraft, tactics, and techniques that actually work.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        /* Modern animated gradient background */
+        .hero-gradient { 
+            background: linear-gradient(-45deg, #0f766e, #115e59, #0d9488, #14b8a6);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Animated background pattern */
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        /* Glassmorphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+        
+        /* Modern book cover with 3D effect */
+        .book-cover {
+            background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #14b8a6 100%);
+            box-shadow: 
+                0 20px 60px rgba(15, 118, 110, 0.5),
+                0 10px 30px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transform: perspective(1500px) rotateY(-8deg) rotateX(2deg);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .book-cover:hover {
+            transform: perspective(1500px) rotateY(0deg) rotateX(0deg) translateY(-15px) scale(1.02);
+            box-shadow: 
+                0 30px 80px rgba(15, 118, 110, 0.6),
+                0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Floating animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Modern card hover effect */
+        .modern-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .modern-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(135deg, #14b8a6, #0f766e);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        
+        .modern-card:hover::before {
+            opacity: 1;
+        }
+        
+        .modern-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Glowing button */
+        .glow-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .glow-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s;
+        }
+        
+        .glow-button:hover::before {
+            left: 100%;
+        }
+        
+        .glow-button:hover {
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+        }
+        
+        /* Mesh gradient background */
+        .mesh-gradient {
+            background: 
+                radial-gradient(at 40% 20%, hsla(180, 65%, 45%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(180, 75%, 55%, 0.12) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(180, 70%, 50%, 0.08) 0px, transparent 50%);
+        }
+        
+        /* Icon pulse animation */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        
+        .icon-pulse {
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        /* Smooth reveal on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Premium stats counter */
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid rgba(15, 118, 110, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            border-color: rgba(15, 118, 110, 0.3);
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%);
+        }
+        
+        /* Navigation blur effect */
+        .nav-blur {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(15, 118, 110, 0.1);
+        }
+        
+        /* Testimonial style quote */
+        .quote-style {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .quote-style::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 4rem;
+            color: rgba(15, 118, 110, 0.2);
+            font-family: Georgia, serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-white to-teal-50">
+
+    <!-- Navigation -->
+    <nav class="nav-blur sticky top-0 z-50 shadow-sm" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                    <svg class="h-10 w-auto" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Icon with water waves and book -->
+                        <g id="icon">
+                            <!-- Outer circle background -->
+                            <circle cx="50" cy="50" r="42" fill="#0d9488" opacity="0.1"/>
+                            
+                            <!-- Water waves -->
+                            <path d="M 25 55 Q 32 50, 40 55 T 55 55 T 70 55" 
+                                  stroke="#0d9488" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <path d="M 23 62 Q 31 57, 40 62 T 57 62 T 75 62" 
+                                  stroke="#14b8a6" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                            <path d="M 25 70 Q 33 65, 42 70 T 60 70 T 77 70" 
+                                  stroke="#0f766e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                            
+                            <!-- Open book -->
+                            <g transform="translate(50, 30)">
+                                <!-- Left page -->
+                                <path d="M -12 0 L -12 17 Q -10 18, -7 17 L -7 0 Z" 
+                                      fill="#0d9488" opacity="0.9"/>
+                                <!-- Right page -->
+                                <path d="M 7 0 L 7 17 Q 10 18, 12 17 L 12 0 Z" 
+                                      fill="#14b8a6" opacity="0.9"/>
+                                <!-- Spine -->
+                                <rect x="-1" y="0" width="2" height="17" fill="#0f766e"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Text: WATERCRAFT -->
+                        <text x="110" y="45" 
+                              font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" 
+                              font-size="24" 
+                              font-weight="800" 
+                              fill="#0f766e"
+                              letter-spacing="-0.5">WATERCRAFT</text>
+                        
+                        <!-- Text: BOOKS -->
+                        <text x="110" y="67" 
+                              font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" 
+                              font-size="21" 
+                              font-weight="300" 
+                              fill="#0d9488"
+                              letter-spacing="3">BOOKS</text>
+                        
+                        <!-- Tagline -->
+                        <text x="110" y="80" 
+                              font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" 
+                              font-size="7" 
+                              font-weight="500" 
+                              fill="#64748b"
+                              letter-spacing="1">PRACTICAL GUIDES FOR ANGLERS</text>
+                    </svg>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#book" class="px-4 py-2 rounded-lg text-slate-600 hover:text-teal-700 hover:bg-teal-50 transition">The Book</a>
+                    <a href="#about" class="px-4 py-2 rounded-lg text-slate-600 hover:text-teal-700 hover:bg-teal-50 transition">About</a>
+                    <a href="#preview" class="px-4 py-2 rounded-lg text-slate-600 hover:text-teal-700 hover:bg-teal-50 transition">Preview</a>
+                    <a href="#buy" class="ml-2 glow-button bg-gradient-to-r from-teal-600 to-teal-700 text-white px-6 py-2.5 rounded-xl hover:from-teal-700 hover:to-teal-800 transition font-semibold shadow-lg shadow-teal-600/30">Get the Book</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-slate-600 p-2 rounded-lg hover:bg-slate-100" id="mobile-menu-button">
+                    <svg class="w-6 h-6" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg class="w-6 h-6 hidden" id="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden pb-4 space-y-1 hidden" id="mobile-menu">
+                <a href="#book" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-lg text-slate-600 hover:text-teal-700 hover:bg-teal-50 transition">The Book</a>
+                <a href="#about" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-lg text-slate-600 hover:text-teal-700 hover:bg-teal-50 transition">About</a>
+                <a href="#preview" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-lg text-slate-600 hover:text-teal-700 hover:bg-teal-50 transition">Preview</a>
+                <a href="#buy" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-lg text-center bg-gradient-to-r from-teal-600 to-teal-700 text-white font-semibold shadow-lg">Get the Book</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white relative overflow-hidden min-h-screen flex items-center">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.4&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left: Text Content -->
+                <div class="space-y-8 reveal active">
+                    <div class="inline-flex items-center space-x-2 glass px-4 py-2 rounded-full text-sm font-semibold">
+                        <span class="flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-teal-300 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-teal-200"></span>
+                        </span>
+                        <span>Now Available</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                        Understanding<br/>
+                        <span class="bg-gradient-to-r from-teal-200 to-white bg-clip-text text-transparent">Carp Fishing</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-teal-50 leading-relaxed">
+                        A Practical Guide to Watercraft, Behaviour & Tactics on British Waters
+                    </p>
+                    <p class="text-lg text-slate-200 leading-relaxed">
+                        27 years of experience from Bulgaria to Britain. No sponsorships. 
+                        No marketing hype. Just honest knowledge tested on British waters.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#buy" class="glow-button bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-amber-500 hover:to-amber-600 transition text-center shadow-2xl shadow-amber-500/50">
+                            Get Your Copy
+                        </a>
+                        <a href="#preview" class="glass px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition text-center">
+                            Read Preview
+                        </a>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-teal-200">43K+</div>
+                            <div class="text-sm text-slate-300">Words</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-teal-200">13</div>
+                            <div class="text-sm text-slate-300">Chapters</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-teal-200">27</div>
+                            <div class="text-sm text-slate-300">Years Exp</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Book Cover Mockup -->
+                <div class="flex justify-center float">
+                    <div class="relative">
+                        <div class="w-72 h-[28rem] book-cover rounded-2xl flex items-center justify-center border border-white/20 shadow-2xl">
+                            <div class="text-center px-10 space-y-8">
+                                <div class="space-y-3">
+                                    <h3 class="text-3xl font-bold tracking-tight">UNDERSTANDING</h3>
+                                    <h3 class="text-3xl font-bold tracking-tight">CARP FISHING</h3>
+                                </div>
+                                <div class="h-32 flex items-center justify-center icon-pulse">
+                                    <svg class="w-24 h-24 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-sm leading-relaxed opacity-90 px-2">
+                                    A Practical Guide to Watercraft, Behaviour & Tactics on British Waters
+                                </p>
+                                <p class="text-xl font-bold tracking-widest">VENTSE</p>
+                            </div>
+                        </div>
+                        <!-- Decorative elements -->
+                        <div class="absolute -z-10 top-10 -right-10 w-40 h-40 bg-teal-400 rounded-full blur-3xl opacity-20"></div>
+                        <div class="absolute -z-10 -bottom-10 -left-10 w-40 h-40 bg-teal-300 rounded-full blur-3xl opacity-20"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Different Section -->
+    <section class="py-24 bg-white mesh-gradient">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold mb-4">
+                    What Makes This Different
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                    Not Another Tackle Catalog
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+                    A genuine guide from someone who learned British carp fishing from scratch
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="modern-card bg-white p-8 rounded-2xl border border-slate-200 shadow-lg">
+                    <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-teal-500/30">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Knowledge Over Gear</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        No sponsored products. No tackle advertising. Just honest guidance on understanding 
+                        fish behaviour and watercraft that actually catches carp.
+                    </p>
+                </div>
+
+                <div class="modern-card bg-white p-8 rounded-2xl border border-slate-200 shadow-lg">
+                    <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-teal-500/30">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">UK-Specific Expertise</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Tested on British waters from Kent to Suffolk. Covers tactics that work on 
+                        UK lakes, rivers, and reservoirs—not American bass fishing translated.
+                    </p>
+                </div>
+
+                <div class="modern-card bg-white p-8 rounded-2xl border border-slate-200 shadow-lg">
+                    <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-teal-500/30">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Authentic Journey</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        27 years from Bulgarian coarse fishing to British carp specialist. Written 
+                        by someone who remembers being a beginner and learned from mistakes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Book Section -->
+    <section id="book" class="py-24 bg-gradient-to-br from-slate-50 to-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+                <div>
+                    <div class="inline-block px-4 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold mb-6">
+                        Inside the Book
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
+                        What You'll Learn
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 group">
+                            <div class="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0 mt-1 shadow-lg shadow-teal-500/30 group-hover:scale-110 transition">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-2 text-lg">How Carp Think and Feed</h4>
+                                <p class="text-slate-600 leading-relaxed">Understanding behaviour, metabolism, and seasonal patterns that dictate where fish are and when they feed.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 group">
+                            <div class="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0 mt-1 shadow-lg shadow-teal-500/30 group-hover:scale-110 transition">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-2 text-lg">Essential Tackle Without the Hype</h4>
+                                <p class="text-slate-600 leading-relaxed">What you actually need vs. what tackle shops want to sell you. Budget-conscious recommendations tested over decades.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 group">
+                            <div class="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0 mt-1 shadow-lg shadow-teal-500/30 group-hover:scale-110 transition">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-2 text-lg">The Hair Rig Mastered</h4>
+                                <p class="text-slate-600 leading-relaxed">Step-by-step instructions for carp fishing's most essential technique. Learn why it works, not just how to tie it.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 group">
+                            <div class="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0 mt-1 shadow-lg shadow-teal-500/30 group-hover:scale-110 transition">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-2 text-lg">Watercraft That Finds Fish</h4>
+                                <p class="text-slate-600 leading-relaxed">Reading water, understanding weather patterns, feature finding, and location strategies that put you on fish consistently.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 group">
+                            <div class="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0 mt-1 shadow-lg shadow-teal-500/30 group-hover:scale-110 transition">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-2 text-lg">Complete Session Planning</h4>
+                                <p class="text-slate-600 leading-relaxed">From pre-session preparation through post-session reflection. Transform random casting into strategic fishing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-white to-teal-50 p-10 rounded-3xl shadow-2xl border border-teal-100">
+                    <h3 class="text-3xl font-bold text-slate-900 mb-8">Book Statistics</h3>
+                    <div class="space-y-5">
+                        <div class="stat-card flex justify-between items-center p-5 rounded-2xl">
+                            <span class="font-semibold text-slate-700">Total Words</span>
+                            <span class="text-2xl font-bold gradient-text">43,000+</span>
+                        </div>
+                        <div class="stat-card flex justify-between items-center p-5 rounded-2xl">
+                            <span class="font-semibold text-slate-700">Chapters</span>
+                            <span class="text-2xl font-bold gradient-text">13</span>
+                        </div>
+                        <div class="stat-card flex justify-between items-center p-5 rounded-2xl">
+                            <span class="font-semibold text-slate-700">Appendices</span>
+                            <span class="text-2xl font-bold gradient-text">4</span>
+                        </div>
+                        <div class="stat-card flex justify-between items-center p-5 rounded-2xl">
+                            <span class="font-semibold text-slate-700">Pro Tips</span>
+                            <span class="text-2xl font-bold gradient-text">63</span>
+                        </div>
+                        <div class="stat-card flex justify-between items-center p-5 rounded-2xl">
+                            <span class="font-semibold text-slate-700">Real Stories</span>
+                            <span class="text-2xl font-bold gradient-text">17</span>
+                        </div>
+                        <div class="stat-card flex justify-between items-center p-5 rounded-2xl">
+                            <span class="font-semibold text-slate-700">Glossary Terms</span>
+                            <span class="text-2xl font-bold gradient-text">100+</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 p-6 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl shadow-xl">
+                        <p class="text-white italic text-center leading-relaxed font-medium">
+                            "Knowledge beats equipment. Understanding beats guessing. 
+                            Watercraft beats luck. This book teaches all three."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold mb-4">
+                    The Author
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                    About V.Fisher
+                </h2>
+                <p class="text-2xl text-slate-600">
+                    From Bulgaria to Britain: A 27-Year Fishing Journey
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-10 md:p-14 shadow-2xl border border-slate-200">
+                <div class="space-y-6 text-lg text-slate-700 leading-relaxed">
+                    <p>
+                        I started fishing 27 years ago in Bulgaria, targeting F1, roach, and perch on local waters. 
+                        Fifteen years ago, I moved to the UK and discovered British carp fishing—a completely different 
+                        discipline that required learning from scratch.
+                    </p>
+                    <p>
+                        Based in Suffolk, I work on farms and fish club waters with my wife and two sons. My personal 
+                        best is 36lb 9oz, but this book isn't about trophy fish or sponsored gear. It's about the knowledge 
+                        I wish I'd had when starting out on British waters.
+                    </p>
+                    <p>
+                        After decades of watching beginners waste money on unnecessary tackle and struggling with advice 
+                        that doesn't match UK conditions, I wrote the guide I needed as a beginner: honest, practical, 
+                        and tested on the waters you'll actually fish.
+                    </p>
+                    <div class="quote-style text-slate-700 italic bg-gradient-to-r from-teal-50 to-transparent p-6 rounded-2xl border-l-4 border-teal-500 my-8">
+                        This isn't about becoming a celebrity angler or chasing sponsorships. It's about helping 
+                        beginners understand carp fishing properly—the way I had to learn it, through experience, 
+                        mistakes, and eventually, success.
+                    </div>
+
+                    <div class="flex items-center justify-center pt-8">
+                        <a href="https://instagram.com/watercraftbooks" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:from-pink-600 hover:to-purple-700 transition shadow-xl shadow-pink-500/30">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            <span>@watercraftbooks</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section id="preview" class="py-24 hero-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.4&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1 glass rounded-full text-sm font-semibold mb-4">
+                    Complete Contents
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Table of Contents
+                </h2>
+                <p class="text-xl text-teal-100">
+                    13 comprehensive chapters covering everything from fish biology to session planning
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass rounded-2xl p-8 space-y-6">
+                    <h3 class="text-xl font-bold text-teal-200 mb-6">PART ONE: Understanding Carp</h3>
+                    <div class="space-y-3 text-slate-100">
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">01</span> The Noble Carp</p>
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">02</span> How Carp Think and Feed</p>
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">03</span> Seasonal Patterns</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-teal-200 mb-6 pt-8">PART TWO: Essential Tackle</h3>
+                    <div class="space-y-3 text-slate-100">
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">04</span> Rods, Reels, and Lines</p>
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">05</span> Terminal Tackle Essentials</p>
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">06</span> Choosing the Right Bait</p>
+                    </div>
+                </div>
+
+                <div class="glass rounded-2xl p-8 space-y-6">
+                    <h3 class="text-xl font-bold text-teal-200 mb-6">PART THREE: Techniques</h3>
+                    <div class="space-y-3 text-slate-100">
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">07</span> The Hair Rig Mastered</p>
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">08</span> Casting with Accuracy</p>
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">09</span> Location and Watercraft</p>
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">10</span> Bite Indication & Playing Fish</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-teal-200 mb-6 pt-8">PART FOUR: Putting It Together</h3>
+                    <div class="space-y-3 text-slate-100">
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">11</span> Planning Your First Session</p>
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">12</span> Building Your Skills</p>
+                        <p class="flex items-center"><span class="text-teal-300 font-bold mr-3">13</span> Your Journey Continues</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center glass rounded-2xl p-8">
+                <p class="text-teal-200 mb-3 font-semibold">Plus 4 detailed appendices:</p>
+                <p class="text-slate-200 text-lg">
+                    Essential Knots • Tackle Checklist • Glossary of Terms • Further Resources
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Section -->
+    <section id="buy" class="py-24 bg-gradient-to-br from-slate-50 to-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block px-4 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold mb-6">
+                Get Your Copy
+            </div>
+            <h2 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
+                Start Your Journey Today
+            </h2>
+            <p class="text-xl text-slate-600 mb-16 max-w-2xl mx-auto">
+                Join hundreds of anglers learning to understand carp fishing from the water up. 
+                Available now as eBook and paperback.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div class="modern-card bg-white p-10 rounded-3xl border-2 border-slate-200 shadow-xl">
+                    <div class="text-6xl mb-4">📱</div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-3">eBook</h3>
+                    <p class="text-5xl font-bold gradient-text mb-6">$7.99</p>
+                    <p class="text-slate-600 mb-8 text-lg">Instant download. Read on any device.</p>
+                    <a href="https://amazon.com/dp/YOUR-ASIN" class="glow-button block bg-gradient-to-r from-teal-600 to-teal-700 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-teal-700 hover:to-teal-800 transition shadow-xl shadow-teal-600/30">
+                        Buy on Amazon
+                    </a>
+                </div>
+
+                <div class="modern-card bg-gradient-to-br from-teal-500 to-teal-600 p-10 rounded-3xl border-2 border-teal-400 shadow-2xl shadow-teal-600/50 text-white">
+                    <div class="text-6xl mb-4">📖</div>
+                    <h3 class="text-3xl font-bold mb-3">Paperback</h3>
+                    <p class="text-5xl font-bold mb-6">£14.99</p>
+                    <p class="text-teal-50 mb-8 text-lg">Physical book. 150+ pages.</p>
+                    <a href="https://amazon.com/dp/YOUR-PAPERBACK-ASIN" class="glow-button block bg-white text-teal-700 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition shadow-xl">
+                        Buy on Amazon
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-slate-500 mt-12 text-lg">
+                Also available on <span class="font-semibold text-slate-700">Kindle Unlimited</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Water waves -->
+                                <path d="M 10 28 Q 17 23, 24 28 T 38 28" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                <path d="M 8 34 Q 16 29, 24 34 T 40 34" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8"/>
+                                <!-- Open book -->
+                                <g transform="translate(25, 12)">
+                                    <path d="M -8 0 L -8 12 Q -6 13, -4 12 L -4 0 Z" fill="white" opacity="0.95"/>
+                                    <path d="M 4 0 L 4 12 Q 6 13, 8 12 L 8 0 Z" fill="white" opacity="0.85"/>
+                                    <rect x="-1" y="0" width="2" height="12" fill="white"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-bold">Watercraft Books</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Understanding Carp Fishing: A practical guide for British waters. 27 years of experience condensed into actionable knowledge.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                    <div class="space-y-3 text-slate-400">
+                        <a href="#book" class="block hover:text-teal-400 transition hover:translate-x-1 transform duration-200">→ The Book</a>
+                        <a href="#about" class="block hover:text-teal-400 transition hover:translate-x-1 transform duration-200">→ About V.Fisher</a>
+                        <a href="#preview" class="block hover:text-teal-400 transition hover:translate-x-1 transform duration-200">→ Preview</a>
+                        <a href="#buy" class="block hover:text-teal-400 transition hover:translate-x-1 transform duration-200">→ Buy Now</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Connect</h4>
+                    <div class="space-y-4">
+                        <a href="https://instagram.com/watercraftbooks" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-slate-400 hover:text-teal-400 transition group">
+                            <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-pink-500 group-hover:to-purple-600 transition">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </div>
+                            <span class="font-semibold">@watercraftbooks</span>
+                        </a>
+                        <a href="/cdn-cgi/l/email-protection#72111d1c0613110632170a131f021e175c111d1f" class="flex items-center space-x-3 text-slate-400 hover:text-teal-400 transition group">
+                            <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center group-hover:bg-teal-600 transition">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <span class="font-semibold">Get in Touch</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-700 pt-8 text-center text-slate-400">
+                <p class="text-lg">© 2026 Watercraft Books. All rights reserved.</p>
+                <p class="mt-2">
+                    Understanding Carp Fishing • Published 2026
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            menu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            menu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        }
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+   
